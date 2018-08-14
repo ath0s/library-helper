@@ -3,7 +3,9 @@ package com.ath0s;
 import com.intellij.icons.AllIcons;
 import com.intellij.ide.projectView.impl.ProjectViewTree;
 import com.intellij.ide.projectView.impl.nodes.NamedLibraryElement;
-import com.intellij.openapi.actionSystem.*;
+import com.intellij.openapi.actionSystem.AnAction;
+import com.intellij.openapi.actionSystem.AnActionEvent;
+import com.intellij.openapi.actionSystem.DataKeys;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.project.ProjectBundle;
 import com.intellij.openapi.roots.LibraryOrSdkOrderEntry;
@@ -24,7 +26,6 @@ public class LibraryFindUsageAction extends AnAction {
 
     public LibraryFindUsageAction() {
         super(ProjectBundle.message("find.usages.action.text"), ProjectBundle.message("find.usages.action.text"), AllIcons.Actions.Find);
-        registerCustomShortcutSet(ActionManager.getInstance().getAction(IdeActions.ACTION_FIND_USAGES).getShortcutSet(), null);
     }
 
     @Override
